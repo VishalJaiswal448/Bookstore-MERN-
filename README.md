@@ -1,4 +1,4 @@
-# BookBazaar — MERN Multi-Vendor Bookstore
+# Bookestro — MERN Multi-Vendor Bookstore
 
 Bookestro is a responsive full-stack bookstore marketplace built with **React + Vite, Node.js + Express, MongoDB/Mongoose and Razorpay**.
 
@@ -76,22 +76,13 @@ The seed script is **non-destructive**. It creates/repairs the demo admin, selle
 Default local demo accounts:
 
 ```text
-Admin
-admin@bookbazaar.local
-Password123
-
 Seller
-seller@bookbazaar.local
-Password123
+seller@gmail.com
+happy12345
 ```
 
 You may override the demo/admin credentials before running the seed script:
 
-```env
-ADMIN_EMAIL=admin@example.com
-ADMIN_PASSWORD=your-strong-password
-SELLER_EMAIL=seller@example.com
-SELLER_PASSWORD=your-strong-password
 ```
 
 ### 4. Start backend
@@ -135,13 +126,9 @@ If the admin account shows **Invalid email or password**:
 1. Make sure the backend is connected to the MongoDB database you expect.
 2. Run the non-destructive admin repair command:
 
-```bash
-npm run admin:repair
-```
-
 3. Restart the backend.
-4. Log out of BookBazaar and sign in again.
-5. Use the exact email/password configured in `ADMIN_EMAIL` and `ADMIN_PASSWORD`.
+4. Log out of Bookestro and sign in again.
+5. Use the exact email/password configured in `SELLER_EMAIL` and `SELLER_PASSWORD`.
 
 Use `npm run seed --prefix backend` only when you also want to create/repair the demo seller, categories and initial books. The seed script does not delete existing products/orders. The admin repair command only repairs the admin account.
 
@@ -233,8 +220,8 @@ Health check:
 ### Docker
 
 ```bash
-docker build -t bookbazaar .
-docker run --env-file backend/.env -p 5000:5000 bookbazaar
+docker build -t bookestro .
+docker run --env-file backend/.env -p 5000:5000 bookestro
 ```
 
 ## API overview
@@ -283,7 +270,7 @@ docker run --env-file backend/.env -p 5000:5000 bookbazaar
 ## Project structure
 
 ```text
-BookBazaar-MERN-Bookstore/
+Bookestro-MERN-Bookstore/
 ├── backend/
 │   ├── src/
 │   │   ├── config/
